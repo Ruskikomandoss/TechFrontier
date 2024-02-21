@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Created entirely by AI -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %} 
+    <title>TechFrontier - {{title}}</title>
+    {% else %}
+    <title>Welcome to TechFrontier</title>
+    {% endif %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/pagestyle2.css')}}">
+    <meta name="description" content="A tech blog dedicated to discussing the latest trends and innovations in technology.">
+    <meta name="keywords" content="Technology, Innovations, Blog, Articles">
+    <meta name="author" content="Tech Blog">
+    <!-- aria-label additions example -->
+    <nav aria-label="Main navigation">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+
+    <header>
+        <h1>TechFrontier</h1>
+        <p>We are the Cyber Era Explorers!</p>
+        <nav style="nav ul li">
+        <!-- oszukujemy nody xd -->
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="{{ url_for('blog_page')}}">Articles</a></li>
+                <li><a href="{{ url_for('register')}}">Sign up</a></li>
+                <li><a href="{{ url_for('login')}}">Sign in</a></li>
+                <li><a href="{{ url_for('repl')}}">Python REPL</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+<main>
+    <!-- This ensures any flash messages appear in proper moments -->
+    {%  with messages = get_flashed_messages() %}
+        {% if messages %}
+                <div class="banner">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                </div>`
+        {% endif %}
+    {% endwith %}
+
+    {% block body %}
+<!-- The children pages content goes here -->
+    {% endblock %}
+</main>
+
+
+<aside>
+    
+    <h4>Newsletter Signup</h4>
+    <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <button type="submit" onclick="alert('The service is not avaiable at the moment. Sorry!')">Subscribe</button>
+    </form>
+    <h4>Follow Us</h4>
+    <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+    </ul>
+</aside>
+
+<footer>
+    <section id="about">
+        <h5>About Us</h5>
+        <p>We are a team of tech enthusiasts dedicated to exploring and sharing the latest in technology trends and innovations.</p>
+    </section>
+    <section id="contact">
+        <h5>Contact Us</h5>
+        <address>
+            Email us at <a href="mailto:contact@techblog.com">contact@techblog.com</a>
+        </address>
+    <section id="terms">
+        <h5>Terms and Conditions</h5>
+        <p>Review our terms and conditions to understand your rights and responsibilities as a user.</p>
+        <a href="#">Click here!</a>
+    </section>
+    </section>
+    <br>
+    <div>
+    <p>&copy; TechFrontier</p>
+    </div>
+    <div id="scripts">
+        <script src="../static/js/dataTimeDisplay.js"></script>
+        <script src="../static/js/readMes.js"></script>
+        <script src="../static/js/clickHere.js"></script>
+        <script src="../static/js/mainPageAdditionalText.js"></script>
+    </div>
+</footer>
+</body>
+</html>

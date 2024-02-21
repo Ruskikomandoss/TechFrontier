@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<section id="articles">
+    {% for post in posts %}
+        <article>
+            <h3>{{ post.title }}</h3>
+            <p style="font-style: italic; text-decoration: underline;">By {{ post.author }} published on {{ post.publication_date }}</p>
+            <p style="text-align: justify; ">{{ post.content }}</p>
+            <a href="#">Read More</a>
+        </article>
+    {% endfor %}
+</section>
+
+{% endblock %}

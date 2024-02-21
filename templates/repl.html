@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<!-- pyscript below -->
+<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+
+<aside>
+<h1>Welcome to our free Python REPL (Read-Eval-Print Loop)</h1>
+<p>Python is one of the most popular programming languages in the world, known for its simplicity and versatility. With our online REPL, you can write, run, and debug Python code right in your browser without the need for any installations or setup.</p>
+<p>Whether you're a beginner just starting out with programming or an experienced coder looking to test out a new idea, our Python REPL has got you covered.</p>
+<p>So why wait? Dive into the world of Python programming today and unleash your creativity with our free Python REPL. Happy coding!</p>
+<p><b>TIP:</b> Press SHIFT+ENTER to execute the commands in the cell.</p>
+</div>
+<br>
+<section class="pyscript">
+    <div>
+        <py-repl id="techfrontier-py-repl" auto-generate="true"></py-repl>
+    </div>
+</section>
+<br>
+</aside>
+{% endblock %}

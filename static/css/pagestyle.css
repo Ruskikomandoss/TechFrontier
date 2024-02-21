@@ -1,0 +1,185 @@
+/* Universal Styles & Box Sizing */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typographic Adjustments */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3, h4, h5, p {
+    margin-bottom: 15px; /* Adds spacing between text elements */
+}
+
+/* Header Styles */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    
+}
+
+h2{
+    color: pink;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #339CFF; /* Enhancing contrast */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+    color:#e9ecef;
+}
+
+nav a {
+    color: #007bff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus,
+nav ul li a.active {
+    background-color: #004494; /* Darker to highlight active or hovered */
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Banner and Content Section */
+.banner, .content-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #e9ecef;
+    color: #333;
+}
+
+/* Articles and Reviews Styling */
+#articles {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    float: none;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+article {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 20px;
+    width: 30%;
+}
+
+#reviews {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 15px;
+}
+
+#reviews article {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 20px;
+    width: 30%;
+}
+
+
+.article:hover, .review:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Hover state */
+}
+
+/* Aside Styles */
+aside {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+aside h4 {
+    margin-bottom: 10px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #fff;
+}
+
+/* Contact Form Enhancements */
+#contact form input[type="text"],
+#contact form input[type="email"],
+#contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#contact form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .article, .review {
+        flex-basis: 45%; /* Adjust width for better fit */
+    }
+}
+
+@media (max-width: 768px) {
+    .article, .review {
+        flex-basis: 100%; /* Stack them vertically on smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+    }
+}
